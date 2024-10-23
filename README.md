@@ -18,10 +18,12 @@ This notebook analyzes contract awards financed by The World Bank under Investme
 ### Data Sources
 - [World Bank Contract Awards Dataset](https://financesone.worldbank.org/contract-awards-in-investment-project-financing/DS00005)
 - [World Bank GDP Growth Indicator](https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG)
+- [Investment Contracts CSV](https://drive.google.com/file/d/1KxbwH4l-gjjhX4GV0dVwmK5xhzbwywM8/view?usp=sharing)
 
 # Analysis of Contract Awards in Investment Project Financing
 
 ### 2. Data Preparation <a id="data-preparation"></a>
+- [Presentation](https://docs.google.com/presentation/d/1UEbeN3UVTxcIlRh5esy8SHXutRsmbPYCOvvHlp_w4Nw/edit?usp=sharing)
 - **Objective**: Import necessary libraries and load datasets for analysis.
 - **Actions**: 
   - Suppressed warnings for cleaner output.
