@@ -1,13 +1,17 @@
 # Analysis of Contract Awards in Investment Project Financing
 
 ## Table of Contents
-1. [Introduction](#introduction)
-2. [Data Preparation](#data-preparation)
-3. [Project Global Practice Analysis](#project-global-practice-analysis)
-4. [Procurement Category Analysis](#procurement-category-analysis)
-5. [Regional GDP Growth Analysis](#regional-gdp-growth-analysis)
+- [1. Introduction](#introduction)
+- [2. Data Preparation](#data-preparation)
+- [3. Data Cleaning and Transformation](#data-cleaning-and-transformation)
+- [4. Exploratory Data Analysis](#exploratory-data-analysis-eda)
+- [5. Country-Specific Analysis](#country-specific-analysis)
+- [6. Forecasting with Prophet](#forecasting-with-prophet)
+- [7. Regional Analysis](#regional-analysis)
+- [8. Supplier and Contract Analysis](#supplier-and-contract-analysis)
+- [9. Conclusion](#conclusion)
 
-## Introduction <a name="introduction"></a>
+## 1. Introduction <a id="introduction"></a>
 
 This notebook analyzes contract awards financed by The World Bank under Investment Project Financing (IPF) operations and explores the relationship between these awards and GDP growth across different regions.
 
@@ -15,56 +19,51 @@ This notebook analyzes contract awards financed by The World Bank under Investme
 - [World Bank Contract Awards Dataset](https://financesone.worldbank.org/contract-awards-in-investment-project-financing/DS00005)
 - [World Bank GDP Growth Indicator](https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG)
 
-## Data Preparation <a name="data-preparation"></a>
+# Analysis of Contract Awards in Investment Project Financing
 
-In this section, we import the necessary libraries and load the datasets for analysis.
+### 2. Data Preparation <a id="data-preparation"></a>
+- **Objective**: Import necessary libraries and load datasets for analysis.
+- **Actions**: 
+  - Suppressed warnings for cleaner output.
+  - Loaded and prepared GDP and contract awards datasets.
 
-[Code cells for importing libraries and reading data]
+### 3. Data Cleaning and Transformation <a id="data-cleaning-and-transformation"></a>
+- **Objective**: Prepare the data for analysis by cleaning and transforming it.
+- **Actions**:
+  - Converted date columns to datetime format.
+  - Extracted relevant columns and filtered data.
+  - Split rows with multiple values in certain columns into separate rows.
 
-**Discussion:**
-- We've imported key libraries such as pandas, matplotlib, and seaborn for data manipulation and visualization.
-- The GDP dataset provides annual GDP growth rates for countries worldwide from 2015 to 2023.
-- Initial data exploration shows the structure of our datasets.
+  ### 4. Exploratory Data Analysis (EDA) <a id="exploratory-data-analysis-eda"></a>
+- **Objective**: Perform exploratory analysis to uncover patterns and insights.
+- **Actions**:
+  - Visualized data distributions using pie charts and bar plots.
+  - Analyzed contract amounts by various categories and regions.
 
-## Project Global Practice Analysis <a name="project-global-practice-analysis"></a>
+### 5. Country-Specific Analysis <a id="country-specific-analysis"></a>
+- **Objective**: Focus on specific countries to analyze contract awards and trends.
+- **Actions**:
+  - Conducted detailed analysis for Afghanistan and India.
+  - Visualized spending and project counts over time.
+  - Prepared data for forecasting using the Prophet model.
 
-This section examines the distribution of contract awards across different project global practices.
+### 6. Forecasting with Prophet <a id="forecasting-with-prophet"></a>
+- **Objective**: Forecast future trends in contract awards using the Prophet model.
+- **Actions**:
+  - Fitted Prophet models to spending and contract count data.
+  - Made future predictions and visualized the results.
 
-[Code cells for Project Global Practice analysis and visualization]
+  ### 7. Regional Analysis <a id="regional-analysis"></a>
+- **Objective**: Analyze contract awards and GDP growth by region.
+- **Actions**:
+  - Mapped countries to regions and calculated average GDP growth.
+  - Visualized GDP growth trends over time for different regions.
 
-**Discussion:**
-- The pie chart illustrates the distribution of projects across various global practices.
-- We can observe that [insert observations about the top practices and their relative percentages].
-- This analysis helps us understand which sectors receive the most funding through World Bank contracts.
+### 8. Supplier and Contract Analysis <a id="supplier-and-contract-analysis"></a>
+- **Objective**: Analyze supplier data and contract awards over time.
+- **Actions**:
+  - Identified top suppliers and their contract amounts.
+  - Analyzed contract awards over time for specific countries and regions.
 
-## Procurement Category Analysis <a name="procurement-category-analysis"></a>
-
-Here, we analyze the distribution of contracts by procurement category.
-
-[Code cells for Procurement Category analysis and visualization]
-
-**Discussion:**
-- The pie chart shows the breakdown of contracts by procurement category.
-- We can see that [insert observations about the dominant procurement categories and their percentages].
-- This information provides insights into the types of goods and services most frequently procured through World Bank contracts.
-
-## Regional GDP Growth Analysis <a name="regional-gdp-growth-analysis"></a>
-
-In this section, we examine the average GDP growth trends across different regions from 2015 to 2023.
-
-[Code cells for Regional GDP Growth analysis and visualization]
-
-**Discussion:**
-- The line graph displays average GDP growth rates for various regions over time.
-- We can observe [insert observations about regional growth trends, notable peaks or troughs, and any apparent correlations with contract awards].
-- This analysis helps us understand the economic context in which World Bank contracts are awarded across different regions.
-
-[Final code cell with conclusion placeholder]
-
-**Conclusion:**
-Summarize key findings from the analysis, including:
-- The most prominent project global practices in terms of contract distribution
-- The dominant procurement categories
-- Regional economic growth trends and their potential relationship with contract awards
-
-Discuss potential implications of these findings for World Bank investment strategies and development outcomes in different regions.
+## 9. Conclusion <a id="conclusion"></a>
+This analysis provides insights into the distribution and trends of contract awards under IPF operations, highlighting the relationship with GDP growth across regions. The use of visualizations and forecasting models aids in understanding past trends and predicting future outcomes.
